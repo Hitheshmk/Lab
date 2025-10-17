@@ -1,0 +1,17 @@
+create table Train_details11(Train_no varchar(20) primary key, Train_name varchar(20), Start_place varchar(20), Destination varchar(20));
+desc Train_details11; 
+insert into Train_details11 values('RJD16', 'Rajdhani Express', 'Bangalore', 'Mumbai');
+insert into Train_details11 values('UDE04', 'Udhyan Express', 'Chennai', 'Hyderabad');
+insert into Train_details11 values('KKE55', 'Karnataka Express', 'Bangalore', 'Chennai');
+insert into Train_details11 values('CSE3', 'Shivaji Express', 'Coimbatore', 'Bangalore');
+insert into Train_details11 values('JNS8', 'Janashatabdi', 'Bangalore', 'Salem');
+select * from Train_details11;
+
+create table Availability11(Train_no varchar(20), Class varchar(20), Start_palce varchar(20), Destination varchar(20), no_of_seats number(5));
+desc Availability11;
+insert into Availability11 values('RJD16', 'Sleeper Class', 'Bangalore', 'Mumbai', 15);
+insert into Availability11 values('UDE04', 'First Class', 'Chennai', 'Hyderabad', 22);
+insert into Availability11 values('KKE55', 'First Class AC', 'Bangalore', 'Chennai', 15);
+insert into Availability11 values('CSE3', 'Second Class', 'Coimbatore', 'Bangalore', 8);
+insert into Availability11 values('JNS8', 'Sleeper Class', 'Bangalore', 'Salem', 18);
+select * from Availability11;
