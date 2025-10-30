@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication16
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const int rows = 3;
+            int[][] jagArr = new int[rows][];
+            jagArr[0] = new int[2];
+            jagArr[1] = new int[3];
+            jagArr[2] = new int[4];
+            jagArr[0][1] = 54;
+            jagArr[1][0] = 26;
+            jagArr[1][1] = 18;
+            jagArr[2][0] = 72;
+            jagArr[2][3] = 404;
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine("This is jagged Array 1 haiving elements:[0][{0}]={1}", i, jagArr[0][i]);
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("This is jagged Array 2 haiving elements:[1][{0}]={1}", i, jagArr[1][i]);
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine("This is jagged Array 3 haiving elements:[2][{0}]={1}", i, jagArr[2][i]);
+            }
+            Console.ReadLine();
+        }
+    }
+}
+               
+                
+

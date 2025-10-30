@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication8
+{
+    class Program
+    {
+        public static void Main()
+        {
+            int a = 325, b = 712, c = 478;
+            Console.WriteLine("Largest value is:");
+            if (a > b)
+            {
+                if (a > c)
+                {
+                    Console.WriteLine(a);
+                }
+                else
+                {
+                    Console.WriteLine(c);
+                }
+            }
+            else
+            {
+                if (c > b)
+                {
+                    Console.WriteLine(c);
+                }
+                else
+                {
+                    Console.WriteLine(b);
+                    Console.ReadLine();
+                }
+            }
+        }
+    }
+}
+
+
+                   
+
+
+
+
+       

@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication12
+{
+    class Nesting
+    {
+       public void Largest(int m, int n)
+        {
+            int large = Max(m, n);
+            Console.WriteLine(large);
+        }
+        int Max(int a, int b)
+        {
+            int x = (a > b) ? a : b;
+            return (x);
+        }
+    }
+    class NestLargest
+    {
+        public static void Main()
+        {
+            Nesting next = new Nesting();
+            next.Largest(100, 200);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+

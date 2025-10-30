@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication17
+{
+    class Program
+    {
+       public void Display()
+       {
+           string str1="";
+           Console.Write("Enter a string:");
+           str1=Console.ReadLine();
+           string str2="";
+           Console.Write("Enter another string:");
+           str2=Console.ReadLine();
+           string str3="C# 2005 is developed in Visual Studio 2005 IDE";
+           Console.WriteLine("string str3 is :{0}", str3);
+           string str5=string.Copy(str2);
+           Console.WriteLine("string str5 is copied from str2:{0}",str5);
+           Console.WriteLine("\nstring str5 is {0} characters long.", str5.Length);
+           Console.WriteLine("The 10th character of str3 is:{0}", str3[9]);
+           Console.WriteLine("string str3:{0}\nEnds with IDE?: {1}\n",
+               str3, 
+               str3.EndsWith("IDE"));
+           Console.WriteLine("Ends with Studio?: {0}", str3.EndsWith("Studio"));
+           Console.WriteLine("\nThe first time characters 'a' occured in string str1 at position:{0}", str1.IndexOf("a")+1);
+           string str6=str2.Insert(6, "helo");
+           Console.WriteLine("hello is inserted in string str6. string s6 is now:{0}\n", str6);
+       }
+        static void Main(string[] args)
+        {
+            Program prg=new Program();
+            prg.Display();
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
