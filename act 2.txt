@@ -1,0 +1,18 @@
+select First_name, Last_name, Adress, City from Employee22 where City='Paris';
+
+select * from Employee22 order by First_name desc;
+
+select First_name, Salary from Employee22, Empsalary22 where Employee22.Emp_id=Empsalary22.Emp_id and Designation='Salesman';
+
+select First_Name, Last_name, Salary+Benefits as Total_salary from Employee22, Empsalary22 where Employee22.Emp_id=Empsalary22.Emp_id;
+
+select count(Distinct Designation) from Empsalary22;
+
+select First_name, Last_name from Employee22 where length(First_name)=6;
+
+alter table Employee22 add Phone_number number(10);
+update Employee22 set Phone_number=9988776655 where Emp_id=1001;
+
+select First_name, Last_name from Employee22 where Hire_date<'15-jun-08' and Hire_date>'16-jun-07';
+
+select First_name, Last_name, Salary, Benefits, (Salary * 0.5) as Hra, (Salary * 0.3) as Da, (Salary * 0.12) as Pf, (Salary + Benefits + (Salary*0.5) + (Salary*0.3) - (Salary*0.12)) as Gross_salary from Employee22, Empsalary22 where Employee22.Emp_id=Empsalary22.Emp_id order by Gross_salary desc;

@@ -1,0 +1,19 @@
+select * from Physics union select * from Computer_science;
+
+select * from Physics intersect select * from Computer_science;
+
+select * from Physics where year='Second' union select * from Computer_science where year='Second';
+
+select * from Physics where year='Second' intersect select * from Computer_science where year='Second';
+
+select * from Physics minus select * from Computer_science;
+
+select * from Computer_science minus select * from Physics;
+
+select * from Physics where combination='PMCs' union select * from Computer_science where combination='PMCs'; 
+
+select * from Physics where combination='BCA' union select * from Computer_science where combination='BCA'; 
+
+select * from Physics where year='Third' union select * from Computer_science where year='Third'; 
+
+alter table Computer_science rename to CS;

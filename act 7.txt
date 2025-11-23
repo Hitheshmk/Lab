@@ -1,0 +1,27 @@
+1
+create view Sleeper12 as select Train_no, Start_place, Destination from Availability12 where Class='Sleeper Class';
+select * from sleeper12;
+insert into Sleeper12 values('MH01', 'Mysore', 'Hassan');
+update Availability12 set Destination='Mangalore' where Train_no='RJD16';
+delete from Availability12 where Train_no='KKE55';
+
+2
+create view details12 as select Train_details12.Train_no, Train_details12.Train_name, Availability12.Class from Train_details12, Availability12 where Train_details12.Train_no=Availability12.Train_no;
+select * from details12;
+
+3
+create view total_seats12 as select Start_place, count(no_of_seats) as total from Availability12 group by Start_place;
+select * from total_seats12;
+
+insert into Availability12 values('KAR11', 'Sleeper Class', 'Mysore', 'Pune', 10);
+
+update Availability12 set Start_place='Hubli' where Start_place='Bangalore';
+
+delete from total_seats12 where Start_place='Chennai';
+
+4
+rename sleeper12 to class12;
+select * from class12;
+
+5
+drop view details12;

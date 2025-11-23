@@ -1,0 +1,19 @@
+select item_name from Equipment_details where date_of_purchase<'31/oct/2007';
+
+update Equipment_details set warranty=warranty + 6;
+
+select item_name, date_of_purchase, trunc(months_between(sysdate, date_of_purchase), 2) as months from Equipment_details;
+
+select item_name, date_of_purchase from Equipment_details where quantity>3 order by date_of_purchase asc;
+
+select count(*), avg(cost_per_item) from Equipment_details where date_of_purchase<'1/jan/08';
+
+select min (warranty), max(warranty) from Equipment_details;
+
+select date_of_purchase, to_char(date_of_purchase, 'day, month, year') from Equipment_details;
+
+select warranty, round(add_months(date_of_purchase, warranty), 'month'), round(add_months(date_of_purchase, warranty), 'year') from Equipment_details;
+
+select next_day('07/jun/1996', 'sunday') from dual;
+
+select item_name from Equipment_details where add_months(date_of_purchase, warranty) >= sysdate;

@@ -1,0 +1,19 @@
+select Book_name, Author_name, Price from Books11 where Publisher='First Publ';
+
+select Book_id, Book_name, Publisher from Books11 where quantity>8 and Price<500;
+
+select Book_id, Book_name, Author_name from Books11 where Publisher!='EPP' and Price between 300 and 700;
+
+select Book_id, Book_name, Publisher, Price, quantity, (4*Price)/100 as VAT, Price+(4*Price)/100 as total from Books11;
+
+select * from Books11 where Book_id in ('C0001', 'F0001', 'T0002', 'F0002');
+
+select Book_name from Books11 where type not in('Novel', 'Fiction');
+
+select * from Books11 where Author_name like 'A%';
+
+select * from Books11 where Book_name like 'T%s';
+
+select Books11.Book_id, Books11.Book_name, Books11.Author_name, Issued11.Quantity_issued from Books11, Issued11 where Books11.Book_id=Issued11.Book_id;
+
+select Book_name, Author_name, Price from Books11 order by Book_name asc, Price desc;

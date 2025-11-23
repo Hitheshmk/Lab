@@ -1,0 +1,29 @@
+select mod(165, 160) from dual;
+
+select sqrt(5000) from dual;
+
+select trunc(128.3285, 2), trunc(128.3285, -1) from dual;
+
+select round(92.7683, 2), round(92.7683, -1) from dual;
+
+select upper('department'), lower('department') from dual;
+
+select initcap('yuvaraja college, mysore') from dual;
+
+select concat('Yuvaraja', 'college') from dual;
+
+select rpad('Yuavaraja', 15, '*') from dual;
+
+select lpad('Yuavaraja', 20, '#') from dual;
+
+select length('Yuvaraja college, mysore') from dual;
+
+select substr('Database', 5, 8) from dual;
+
+select instr('position', 'o', 1, 1), instr('length', 'o', 1, 1) from dual;
+
+select replace('database', 'base', 'type') from dual;
+
+select ascii(' ') from dual;
+
+select chr(56) from dual;
