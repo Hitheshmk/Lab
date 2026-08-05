@@ -47,4 +47,29 @@ $conn->close();
 ?>
 
 
+#include <graphics.h>
+#include <conio.h>
+
+int main()
+{
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "");
+
+    line(50,50,200,50);
+    rectangle(50,80,200,150);
+    circle(125,250,50);
+    ellipse(350,250,0,360,80,40);
+    arc(350,100,0,180,50);
+
+    line(300,300,400,300);
+    line(300,300,350,220);
+    line(350,220,400,300);
+
+    putpixel(450,350,WHITE);
+
+    getch();
+    closegraph();
+    return 0;
+}
+
 
