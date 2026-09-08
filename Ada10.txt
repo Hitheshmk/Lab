@@ -1,0 +1,38 @@
+#include <iostream> 
+#include <algorithm> 
+Using namespace std;
+Struct Edge { int src, dest, weight; }; 
+Int parent[100];
+Int find(int i) {
+While (parent[i] != i) i = parent[i]; 
+Return i;
+}
+Void unionSet(int a, int b) {
+Int rootA = find(a), rootB = find(b); 
+Parent[rootA] = rootB;
+}
+Bool cmp(Edge a, Edge b) { return a.weight < b.weight; } 
+Int main() {
+Int V, E;
+Cout << “Enter number of vertices: “; cin >> V; 
+Cout << “Enter number of edges: “; cin >> E; 
+Edge edges[E];
+Cout << “Enter edges as: src dest weight\n”; 
+For (int i = 0; i < E; i++)
+Cin >> edges[i].src >> edges[i].dest >> edges[i].weight; 
+Sort(edges, edges + E, cmp);
+For (int i = 0; i < V; i++) parent[i] = i; 
+Cout << “Edges in MST:\n”;
+Int totalCost = 0, count = 0;
+For (int i = 0; i < E && count < V – 1; i++) { 
+Int x = find(edges[i].src);
+Int y = find(edges[i].dest); 
+If (x != y) {
+Cout << edges[i].src << “ – “ << edges[i].dest << “\t” << edges[i].weight << endl; 
+totalCost += edges[i].weight;
+unionSet(x, y); 
+count++;
+} }
+Cout << “Total cost of MST = “ << totalCost << endl; 
+Return 0;
+}
