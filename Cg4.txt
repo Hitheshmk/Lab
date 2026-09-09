@@ -1,0 +1,37 @@
+#include <graphics.h>
+#include <conio.h>
+int main()
+{
+int gd = DETECT, gm;
+initgraph(&gd, &gm, (char*)"");
+int xc = 250, yc = 250; // Center of circle
+int r = 100; // Radius
+int x = 0;
+int y = r;
+int p = 3 - 2 * r;
+while (x <= y)
+{
+putpixel(xc + x, yc + y, BLUE);
+putpixel(xc - x, yc + y, BLUE);
+putpixel(xc + x, yc - y, BLUE);
+putpixel(xc - x, yc - y, BLUE);
+putpixel(xc + y, yc + x, BLUE);
+putpixel(xc - y, yc + x, BLUE);
+putpixel(xc + y, yc - x, BLUE);
+putpixel(xc - y, yc - x, BLUE);
+if (p < 0)
+{
+p = p + 4 * x + 6;
+}
+else
+{
+p = p + 4 * (x - y) + 10;
+y--;
+}
+x++;
+}
+outtextxy(180, 50,(char*) "BRESENHAM CIRCLE");
+getch();
+closegraph();
+return 0;
+}
